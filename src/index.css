@@ -1,0 +1,72 @@
+.page{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    width: 100%;
+    height: 901px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.page__wrapper{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0.51) 100%), url(./img/header-wrapper.jpg), lightgray 50% / cover no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.header{
+    width: 100%;
+    max-width: 1280px;
+    padding: 55px;
+    display: flex;
+    flex-direction: row;
+    flex-basis:100%;
+}
+
+.header__logo{
+    width: 269px;
+    height: 55px;
+    flex-shrink: 0;
+    background: url(./img/logo.png), lightgray 50% / contain no-repeat;
+    background-color: transparent;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation__list{
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+}
+
+.header__contact{
+    margin-left: auto;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__icon{
+
+}

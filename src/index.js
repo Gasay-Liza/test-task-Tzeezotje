@@ -13,3 +13,16 @@ function toggleNav() {
   console.log(burger)
   // Переключение состояния навигации и бургер-меню при клике на бургер
   burger.addEventListener('click', toggleNav);
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });

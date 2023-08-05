@@ -88,6 +88,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  cursor: pointer;
   /* 150% */
 }
 
@@ -270,14 +271,29 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  /* 133.333% */
+  cursor: pointer;
 }
 
+.hover{
+    transition: all 500ms ease; 
+}
+
+.hover-btn{
+    transition: all 500ms ease; 
+}
+.hover:hover{
+    opacity: 0.5;
+}
+
+.hover-btn:hover{
+    background-color: #181d31;
+}
 .about__social {
   display: flex;
 }
 
 .social__list {
+    margin: 0 0;
   flex-direction: row;
   gap: 25px;
   list-style-type: none;
@@ -301,6 +317,11 @@
   font-weight: 600;
   line-height: 24px;
 }
+
+.social__link {
+    text-decoration: none;
+    color: inherit;
+  }
 
 .menu {
   padding: 80px 0 90px;
@@ -608,6 +629,120 @@
 
   .menu__interior {
     height: 662px;
+    max-width: 665px;
+}
+
+.swiper-slide__container {
+    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
+}
+.about__title{
+    font-size: 48px;
+}
+.testimonials {
+    padding: 110px 0;
+}
+}
+
+@media screen and (max-width: 768px) {
+    .about__schedule {
+        margin: 120px 0 0;
+        font-size: 18px;
+    }
+
+    .about__title {
+        font-size: 42px;
+    }
+
+    .about__bottom {
+        margin: 32px 0 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+    }
+
+    .about {
+        padding: 55px 0 55px;
+    }
+
+    .testimonials__title {
+        font-size: 24px;
+}
+
+.testimonials__text {
+    font-size: 12px;
+}
+
+.testimonials__author {
+    font-size: 18px;
+}
+}
+@media screen and (max-width: 576px) {
+
+    .navigation.active {
+        max-width: 100%;
+      }
+
+    .header{
+        height: calc(55px*0.75);
+    }
+
+    .header__logo {
+        width: calc(269px*0.75);
+        height: calc(55px*0.75);
+        background: url(./img/logo-small.png), lightgray 50% / contain no-repeat;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    .about__schedule {
+        margin: 34px 0 0;
+        font-size: 16px;
+    }
+
+    .about__title {
+        font-size: 32px;
+        line-height: 64px;
+    }
+
+    .menu__title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .menu__text {
+        font-size: 12px;
+        line-height: 18px;
+}
+.about {
+    height: 700px;
+  }
+
+.about__bottom {
+    gap: 24px;
+}
+.menu__row {
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 63px;
+}
+
+.menu__dots::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 13px;
+    right: -17px;
+    border-radius: 50%;
+    background-color: #d3b47f;
+    box-shadow: 17px 0 0 0 #d3b47f, 34px 0 0 0 #d3b47f;
+}
+
+.menu__interior {
+    height: 362px;
     max-width: 665px;
 }
 }

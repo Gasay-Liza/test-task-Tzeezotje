@@ -23,6 +23,7 @@ function toggleNav() {
     overlay.classList.remove('active');
     burger.classList.remove('active');
   }
+
   console.log(burger)
   // Переключение состояния навигации и бургер-меню при клике на бургер
   burger.addEventListener('click', toggleNav);
@@ -44,3 +45,47 @@ function toggleNav() {
     },
 
   });
+
+// Получаем элементы формы
+const form = document.querySelector('.modal__form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const telephoneInput = document.getElementById('telephone');
+const textareaInput = document.getElementById('textarea');
+
+// Обработчик события отправки формы
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Отменяем стандартное поведение формы
+
+  // Создаем объект FormData и добавляем значения полей формы
+  const formData = new FormData();
+  formData.append('name', nameInput.value);
+  formData.append('email', emailInput.value);
+  formData.append('telephone', telephoneInput.value);
+  formData.append('wishes', textareaInput.value);
+
+  // Создаем новый объект XMLHttpRequest
+  const xhr = new XMLHttpRequest();
+
+  // Устанавливаем метод и URL для отправки данных
+  xhr.open('POST', 'обработчик.php', true);
+
+  // Устанавливаем заголовок для правильной обработки данных на сервере
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+  // Устанавливаем обработчик события загрузки
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // Действия при успешной отправке формы
+      console.log(xhr.responseText);
+    } else {
+      // Действия при ошибке отправки формы
+      console.error(xhr.statusText);
+    }
+  };
+
+  // Отправляем данные формы на сервер
+  xhr.send(formData);
+
+  toggleModalIsActive();
+});

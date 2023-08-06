@@ -2,7 +2,7 @@
 Макет Figma: https://www.figma.com/file/f1GJjeURU58Xdb6bVBwP3n/Tzeezotje-(Copy)?node-id=0%3A1
 
 ## Gh-pages
-ttps://gasay-liza.github.io/test-task-Tzeezotje/
+https://gasay-liza.github.io/test-task-Tzeezotje/
 ## Техническое задание:
 Самостоятельно сделать мобильную верстку;
 Меню на мобильной версии должно быть примерно так: https://prnt.sc/26tpvgd;

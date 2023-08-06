@@ -59,11 +59,19 @@
             </button>
 
             <ul class="navigation__social social social__list">
-                <li class="social__item "><a href="#" class="social__link hover">Fb</a></li>
-                <li class="social__item"><a href="#" class="social__link hover">Ig</a></li>
-                <li class="social__item"><a href="#" class="social__link hover">Tw</a></li>
-                <li class="social__item"><a href="#" class="social__link hover">Yt</a></li>
-              </ul>
+              <li class="social__item">
+                <a href="#" class="social__link hover">Fb</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link hover">Ig</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link hover">Tw</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link hover">Yt</a>
+              </li>
+            </ul>
           </nav>
         </header>
         <h3 class="about__schedule">Open everyday 6AM-9PM</h3>
@@ -71,12 +79,20 @@
           A bad day with lunch is better than a good day without it.
         </h1>
         <div class="about__bottom">
-          <button class="about__btn-reverse hover-btn">Reserve a table</button>
+          <button type="button" class="about__btn-reverse hover-btn" onclick=toggleModalIsActive()>Reserve a table</button>
           <ul class="about__social social social__list">
-            <li class="social__item hover"><a href="#" class="social__link">Fb</a></li>
-            <li class="social__item hover"><a href="#" class="social__link">Ig</a></li>
-            <li class="social__item hover"><a href="#" class="social__link">Tw</a></li>
-            <li class="social__item hover"><a href="#" class="social__link">Yt</a></li>
+            <li class="social__item hover">
+              <a href="#" class="social__link">Fb</a>
+            </li>
+            <li class="social__item hover">
+              <a href="#" class="social__link">Ig</a>
+            </li>
+            <li class="social__item hover">
+              <a href="#" class="social__link">Tw</a>
+            </li>
+            <li class="social__item hover">
+              <a href="#" class="social__link">Yt</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -157,62 +173,90 @@
             </div>
 
             <div class="swiper-slide testimonials__item">
-                <div class="swiper-slide__container">
-                  <div class="testimonials__icon"></div>
-                  <h3 class="testimonials__title">
-                    Goede service, lekker eten, toffe ambiance
-                  </h3>
-                  <div class="testimonials__text">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut&nbsp;labore
-                    et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
-                    At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores
-                    et&nbsp;ea&nbsp;rebum. Stet clita kasd gubergren.
-                  </div>
-                  <div class="testimonials__author">Alain Heyndrickx</div>
+              <div class="swiper-slide__container">
+                <div class="testimonials__icon"></div>
+                <h3 class="testimonials__title">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <div class="testimonials__text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut&nbsp;labore
+                  et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
+                  At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores
+                  et&nbsp;ea&nbsp;rebum. Stet clita kasd gubergren.
                 </div>
+                <div class="testimonials__author">Alain Heyndrickx</div>
               </div>
+            </div>
 
-
-              <div class="swiper-slide testimonials__item">
-                <div class="swiper-slide__container">
-                  <div class="testimonials__icon"></div>
-                  <h3 class="testimonials__title">
-                    Goede service, lekker eten, toffe ambiance
-                  </h3>
-                  <div class="testimonials__text">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut&nbsp;labore
-                    et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
-                    At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores
-                    et&nbsp;ea&nbsp;rebum. Stet clita kasd gubergren.
-                  </div>
-                  <div class="testimonials__author">Alain Heyndrickx</div>
+            <div class="swiper-slide testimonials__item">
+              <div class="swiper-slide__container">
+                <div class="testimonials__icon"></div>
+                <h3 class="testimonials__title">
+                  Goede service, lekker eten, toffe ambiance
+                </h3>
+                <div class="testimonials__text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut&nbsp;labore
+                  et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
+                  At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores
+                  et&nbsp;ea&nbsp;rebum. Stet clita kasd gubergren.
                 </div>
+                <div class="testimonials__author">Alain Heyndrickx</div>
               </div>
-
+            </div>
           </div>
+          <section class="modal" id="modal">
+            <form class="modal__form" method="dialog">
+              <div class="modal__content">
+                <button class="modal__btn-close" onclick=toggleModalIsActive()>
+                </button>
+                <label class="modal__label" for="name"
+                  >Name<input
+                    class="modal__input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Requered name"
+                    required
+                /></label>
 
-          <!-- If we need navigation buttons -->
+                <label class="modal__label" for="email"
+                  >Email<input
+                    class="modal__input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Requered email"
+                    required
+                /></label>
+
+                <label class="modal__label" for="telephone"
+                  >Telephone<input
+                    class="modal__input"
+                    type="tel"
+                    name="telephone"
+                    id="telephone"
+                    placeholder="Requered telephone"
+                    required
+                /></label>
+
+                <label class="modal__label" for="textarea"
+                  >Your wishes<textarea
+                    id="textarea"
+                    class="modal__textarea"
+                    placeholder="You can write your wishes here"
+                  ></textarea>
+                </label>
+                <button type="submit" class="modal-btn hover-btn" onclick=toggleModalIsActive()>Reserve a table</button>
+              </div>
+            </form>
+          </section>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
       </div>
-      <!-- <div class="testimonials__swipe-icon"> </div>
-            <img class="testimonials__icon">
-            <h3 class="testimonials__title">
-
-            </h3>
-            <div class="testimonials__text"></div>
-            <div class="testimonials__author"></div>
-            <div class="testimonials__swipe-icon"> </div> -->
-      <!-- Slider main container -->
     </section>
-    <!-- <section class="food-menu"></section> -->
-    <!-- <section class="gallery"></section>
-    <section class="lending-top"></section>
-    <section class="contacts"></section>
-    <section class="contacts"></section> -->
     <script src="index.js"></script>
   </body>
 </html>

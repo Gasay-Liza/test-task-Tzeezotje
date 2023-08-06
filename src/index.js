@@ -5,17 +5,20 @@ const navigation = header.querySelector('.navigation');
 const navList = navigation.querySelector('.navigation__list');
 const navItem = navigation.querySelector('.navigation__item');
 const telephone= navigation.querySelector('.header__contact');
+const modal= document.querySelector('.modal');
+
+function toggleModalIsActive() {
+  modal.classList.toggle('modal_active');
+}
 
 // Функция для отображения или скрытия навигации и изменения состояния бургер-меню
 function toggleNav() {
-    console.log(burger)
     navigation.classList.toggle('active');
     overlay.classList.toggle('active');
     burger.classList.toggle('active');
   }
 
   function handleClose() {
-    console.log(burger)
     navigation.classList.remove('active');
     overlay.classList.remove('active');
     burger.classList.remove('active');
